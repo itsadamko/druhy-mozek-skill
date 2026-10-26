@@ -1,0 +1,38 @@
+filters:
+  and:
+    - typ == "kontakt"
+    - file.inFolder("20-Lide")
+properties:
+  file.name:
+    displayName: Člověk
+  note.firma:
+    displayName: Firma
+  note.role:
+    displayName: Role
+  note.udrzovat:
+    displayName: Udržovat
+  note.posledni_kontakt:
+    displayName: Poslední kontakt
+views:
+  - type: table
+    name: Všichni
+    order:
+      - file.name
+      - firma
+      - role
+      - posledni_kontakt
+    sort:
+      - property: posledni_kontakt
+        direction: DESC
+  - type: table
+    name: K udržení
+    filters:
+      and:
+        - udrzovat == "ano"
+    order:
+      - file.name
+      - firma
+      - posledni_kontakt
+    sort:
+      - property: posledni_kontakt
+        direction: ASC

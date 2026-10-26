@@ -1,0 +1,46 @@
+filters:
+  and:
+    - typ == "projekt"
+    - file.inFolder("30-Projekty")
+properties:
+  file.name:
+    displayName: Projekt
+  note.firma:
+    displayName: Firma
+  note.stav:
+    displayName: Stav
+  note.ceka_na:
+    displayName: Čeká na
+  note.termin:
+    displayName: Termín
+  note.dalsi_krok:
+    displayName: Další krok
+  note.aktualizovano:
+    displayName: Aktualizováno
+views:
+  - type: table
+    name: Aktivní
+    filters:
+      and:
+        - stav != "hotovo"
+        - stav != "parkovano"
+    order:
+      - file.name
+      - firma
+      - stav
+      - ceka_na
+      - termin
+      - dalsi_krok
+    sort:
+      - property: termin
+        direction: ASC
+  - type: table
+    name: Vše
+    order:
+      - file.name
+      - firma
+      - stav
+      - aktualizovano
+    sort:
+      - property: stav
+        direction: ASC

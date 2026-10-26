@@ -1,0 +1,7 @@
+# Interní občanka projektu (vault Adamka), do veřejného repa nepatří
+_README.md
+
+.DS_Store
+*.swp
+.env*
+*.log

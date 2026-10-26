@@ -1,0 +1,81 @@
+filters:
+  and:
+    - typ == "zakazka"
+    - file.inFolder("15-Zakazky")
+properties:
+  file.name:
+    displayName: Zakázka
+  note.firma:
+    displayName: Firma
+  note.klient:
+    displayName: Klient
+  note.stav:
+    displayName: Stav
+  note.ceka_na:
+    displayName: Čeká na
+  note.termin:
+    displayName: Termín
+  note.dalsi_krok:
+    displayName: Další krok
+  note.hodnota:
+    displayName: Hodnota
+  note.posledni_kontakt:
+    displayName: Poslední kontakt
+views:
+  - type: table
+    name: Běžící
+    filters:
+      and:
+        - stav != "hotovo"
+        - stav != "prohrano"
+    order:
+      - file.name
+      - klient
+      - stav
+      - ceka_na
+      - termin
+      - dalsi_krok
+    sort:
+      - property: termin
+        direction: ASC
+  - type: table
+    name: Čeká na mě
+    filters:
+      and:
+        - ceka_na == "ja"
+        - stav != "hotovo"
+        - stav != "prohrano"
+    order:
+      - file.name
+      - klient
+      - termin
+      - dalsi_krok
+    sort:
+      - property: termin
+        direction: ASC
+  - type: table
+    name: Po firmách
+    filters:
+      and:
+        - stav != "hotovo"
+        - stav != "prohrano"
+    order:
+      - firma
+      - file.name
+      - stav
+      - hodnota
+      - termin
+    sort:
+      - property: firma
+        direction: ASC
+  - type: table
+    name: Vše
+    order:
+      - file.name
+      - firma
+      - klient
+      - stav
+      - posledni_kontakt
+    sort:
+      - property: stav
+        direction: ASC
