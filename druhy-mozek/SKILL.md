@@ -1,6 +1,6 @@
 ---
 name: druhy-mozek
-description: Postaví a nastaví člověku jeho vlastní druhý mozek v Claude Coworku. Obsidian vault s pravidly pro Clauda, osobní profil s rozhodovacím filtrem, lidi a sliby, schůzky, zakázky a projekty, denní smyčku (hlasovka nebo krátký check-in, ranní brief s otázkami) a dva týdny tréninku, jak s Claudem mluvit. Pro lidi, co pracují: zaměstnance, podnikatele i freelancery, bez programování. Použij, když někdo chce „nastavit druhý mozek“, „založit vault“, „second brain“, „nastavit Clauda jako druhý mozek“, nebo pokračovat v rozjetém nastavení (ve vaultu leží 00-System/SETUP.md s neodškrtnutými kroky).
+description: Postaví a nastaví člověku jeho vlastní druhý mozek v Claude Coworku nebo v ChatGPT Work. Obsidian vault s pravidly pro asistenta, osobní profil s rozhodovacím filtrem, lidi a sliby, schůzky, zakázky a projekty, denní smyčku (hlasovka nebo krátký check-in, ranní brief s otázkami) a dva týdny tréninku, jak s asistentem mluvit. Pro lidi, co pracují: zaměstnance, podnikatele i freelancery, bez programování. Použij, když někdo chce „nastavit druhý mozek“, „založit vault“, „second brain“, „nastavit Clauda nebo ChatGPT jako druhý mozek“, nebo pokračovat v rozjetém nastavení (ve vaultu leží 00-System/SETUP.md s neodškrtnutými kroky).
 ---
 
 # Druhý mozek
@@ -18,6 +18,15 @@ Systém vznikl z praxe lidí, kteří ho denně používají, a je obecný:
 skládá se podle toho, jestli je uživatel zaměstnanec, podnikatel,
 freelancer, nebo všechno naráz. **Nic kolem programování se nezakládá**
 (žádný terminál, repozitáře, kód). Celé to jde klikáním a mluvením.
+
+## Claude Cowork, nebo ChatGPT Work
+
+Skill funguje v obou appkách. Kterou uživatel používá, zjistíš ve fázi 0
+(krok 1) a zapíšeš do `00-System/SETUP.md` (řádek `Appka:`). Texty
+skillu jsou psané pro Claude Cowork. **V ChatGPT Work** čti reference
+přes slovník v `references/06_chatgpt_work.md` (Claude = ty, Cowork =
+Work, konektor = plugin) a kde ten soubor říká jinak, platí on:
+předpoklady, projekt, pluginy, naplánované úlohy a přepis vaultu.
 
 ## Skutečný cíl není vault, ale návyk
 
@@ -66,9 +75,12 @@ Podrobnosti tréninku: `references/05_trenink.md`.
 Setup jde přes víc sessions. Stav drží `00-System/SETUP.md` ve vaultu.
 **Na začátku každého spuštění:**
 
-1. Zjisti, jestli je v Coworku připojená složka. Žádná → **fáze 0**.
+1. Zjisti, jestli máš přístup k pracovní složce (v Coworku připojená
+   složka, v ChatGPT Work lokální složka projektu). Žádná → **fáze 0**.
 2. Je v ní `00-System/SETUP.md`?
-   - s neodškrtnutými kroky fází 0 až 5 → přečti ho, jednou větou řekni,
+   - s neodškrtnutými kroky fází 0 až 5 → přečti ho (řádek `Appka:`
+     určuje, podle kterých postupů jedeš; když chybí, je to Claude
+     Cowork), jednou větou řekni,
      kde jste skončili, a pokračuj prvním neodškrtnutým krokem;
    - fáze 0 až 5 hotové → setup je dokončený (fáze 6 běží sama). Zeptej
      se, co chce změnit nebo doplnit, a nic nezakládej znovu.
@@ -87,20 +99,31 @@ jakmile víš, kde vault leží (fáze 0, krok 4).
 
 ## Fáze 0: předpoklady
 
-Postup: `references/03_nastaveni.md`, část A.
+Postup: `references/03_nastaveni.md`, část A (ChatGPT Work:
+`references/06_chatgpt_work.md`, část A).
 
-1. **Tarif a appka.** Cowork je jen v placeném tarifu Claude (Pro, Max,
-   Team, Enterprise) a vault na disku vyžaduje **desktopovou appku Claude**
-   (Mac nebo Windows). Když běžíš v prohlížeči nebo v telefonu, řekni to
-   a pokračujte v desktopové appce.
+1. **Appka.** První otázka fáze 0: kde bude druhý mozek žít, v **Claude
+   Coworku**, nebo v **ChatGPT Work**? Návrh: appka, ve které právě
+   běžíš. Projekt, úlohy a konektory se nastavují jen v jedné appce,
+   takže když používá obě, ať vybere tu, ve které bude denně pracovat.
+   Když setup běží v jiné appce, než kterou vybral, řekni to a ať
+   pokračuje v té vybrané. Odpověď zapíšeš do `SETUP.md` (krok 4).
+   - **Claude Cowork:** Cowork je jen v placeném tarifu Claude (Pro,
+     Max, Team, Enterprise) a vault na disku vyžaduje **desktopovou
+     appku Claude** (Mac nebo Windows). Když běžíš v prohlížeči nebo
+     v telefonu, řekni to a pokračujte v desktopové appce.
+   - **ChatGPT Work:** placený tarif ChatGPT s Work a desktopová appka
+     ChatGPT, podrobně `06_chatgpt_work.md`, část A.
 2. Mac, nebo Windows? Obsidian nainstalovaný? Když ne: obsidian.md →
    stáhnout → nainstalovat (zdarma).
 3. **Kde bude vault** (část A2: iCloud na Macu, OneDrive na Windows).
    Pak v Obsidianu **Create new vault** → název `Vault` → umístění podle
    výsledku. Když vault už existuje, jen ověř umístění.
-4. V Coworku připojit tuhle složku (část A3) a hned založit
-   `00-System/SETUP.md`. Vyplň v něm datum a **cestu, jak ji vidí
-   počítač** (`/Users/…/Vault`, `C:\Users\…\Vault`), nikdy cestu ze
+4. V appce zpřístupnit tuhle složku (Cowork: část A3, ChatGPT Work:
+   `06_chatgpt_work.md`, část A) a hned založit `00-System/SETUP.md`.
+   Vyplň v něm datum, appku (`Claude Cowork` / `ChatGPT Work`)
+   a **cestu, jak ji vidí počítač** (`/Users/…/Vault`,
+   `C:\Users\…\Vault`), nikdy cestu ze
    shellu (`/sessions/…`). `{{TRENINK_DO}}` nech, doplní se ve fázi 4.
 
 Zálohy se řeší až ve fázi 3, po otázce na firemní data (rozhovor, 03).
@@ -131,6 +154,8 @@ Postup, struktura a mapování odpovědí: `references/02_stavba_vaultu.md`.
 1. Zkopíruj obsah `assets/vault/` do kořene vaultu. `00-System/SETUP.md`
    kopíruj jen když ještě neexistuje. Vyplň místa ve `{{…}}` podle
    rozhovoru. Soubor po souboru, žádné hromadné kopírování.
+   **ChatGPT Work:** při vyplňování rovnou přepiš jméno asistenta
+   a appky a založ `AGENTS.md` (`06_chatgpt_work.md`, část F).
 2. **Nikdy nepřepisuj existující soubor.** Před zápisem ověř, že
    neexistuje. Když existuje, řekni lidsky, co by se změnilo, a zeptej se.
 3. Založ soubory firem (`10-Firmy/`), lidí z rozhovoru (`20-Lide/`),
@@ -141,9 +166,11 @@ Postup, struktura a mapování odpovědí: `references/02_stavba_vaultu.md`.
 6. Ukaž mu k přečtení `CLAUDE.md`, `00-System/MI.md` a
    `00-System/JAK_MLUVIT_S_CLAUDEM.md`. Opravy zapracuj hned.
 
-## Fáze 3: Claude projekt, zálohy a konektory
+## Fáze 3: projekt, zálohy a konektory
 
-Postup: `references/03_nastaveni.md`, části A4, B a C.
+Postup: `references/03_nastaveni.md`, části A4, B a C (ChatGPT Work:
+zálohy stejně podle A4, projekt a pluginy podle `06_chatgpt_work.md`,
+části B a C).
 
 1. Projekt **Druhý mozek** s instrukcemi (text v části B). Instrukce dej
    v bloku ke zkopírování. **Když už setup běží v projektu Druhý mozek**,
@@ -166,7 +193,8 @@ Postup: `references/03_nastaveni.md`, části A4, B a C.
 
 ## Fáze 4: denní smyčka a úlohy
 
-Postup: `references/04_ulohy.md`. Zadání všech úloh žije ve vaultu
+Postup: `references/04_ulohy.md` (ChatGPT Work: zakládání úloh podle
+`06_chatgpt_work.md`, část D). Zadání všech úloh žije ve vaultu
 v `00-System/ULOHY.md` (vznikl ve fázi 2).
 
 1. Zapiš řádek `Start:` do `00-System/VSTUP_STAV.md` (teď, podle G9)

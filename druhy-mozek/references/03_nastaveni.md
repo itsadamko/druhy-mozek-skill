@@ -4,6 +4,9 @@ Kroky dávej po jednom. Názvy tlačítek se mezi verzemi appek mění. Když
 nesedí, nech uživatele popsat, co vidí, a veď ho podle toho. Nikdy
 příkazy do Terminálu.
 
+**ChatGPT Work:** části A1, A2 a A4 platí stejně. Místo A3, B, C a D
+jede podle `06_chatgpt_work.md`.
+
 ## A. Obsidian, složka, zálohy
 
 **A1. Obsidian.** obsidian.md → Download → nainstalovat. Zdarma, účet

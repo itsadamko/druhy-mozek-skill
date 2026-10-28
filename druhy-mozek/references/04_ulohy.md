@@ -1,5 +1,9 @@
 # Úlohy: ranní zpracování, review, údržba, digest
 
+**ChatGPT Work:** princip, test režimu, prompt a pravidla platí stejně.
+Jak úlohu založit, spustit a jaký přístup jí dát, je v
+`06_chatgpt_work.md`, část D.
+
 ## Princip: zadání žije ve vaultu
 
 Celé zadání každé úlohy je v `00-System/ULOHY.md` ve vaultu (vznikl ve

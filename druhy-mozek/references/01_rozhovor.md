@@ -216,6 +216,9 @@ Pár minut denně je rozdíl mezi archivem a druhým mozkem.“
    nadiktuje do session v projektu „check-in: …“ a Claude to hned
    roztřídí. Nejjednodušší, ale potřebuje počítač.
 Kombinace jde (třeba Plaud na schůzky a mail sobě na den).
+**ChatGPT Work:** Plaud nabízej jako denní vstup jen tehdy, když je
+v katalogu pluginů (`06_chatgpt_work.md`, část C). Jinak doporuč mail
+sobě nebo check-in.
 → `{{VSTUP}}`, `{{MAIL_ADRESA}}` a bloky `[POKUD PLAUD/MAIL/CHECKIN]`:
 `CLAUDE.md`, `SKILL_MAP.md` workflow 1, `JAK_MLUVIT_S_CLAUDEM.md`,
 `ULOHY.md`

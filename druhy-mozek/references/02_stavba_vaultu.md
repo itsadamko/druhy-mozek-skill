@@ -105,6 +105,7 @@ druhu, u schůzek až když je jich ve složce přes 30.
 |---|---|---|
 | `{{DATUM}}` | `date +%F` | všude |
 | `{{VAULT_CESTA}}` | cesta, jak ji vidí počítač (`/Users/jana/Vault`, `C:\Users\jana\Vault`), nikdy `/sessions/…` | `CLAUDE.md`, `ULOHY.md`, `SETUP.md` |
+| `{{APPKA}}` | fáze 0, krok 1: `Claude Cowork` / `ChatGPT Work` | `SETUP.md` |
 | `{{JMENO}}` | jak mu říkat (křestní jméno) | `CLAUDE.md`, `ULOHY.md` |
 | `{{OSLOVENI}}` | začátek setupu: „Tykej mi“ / „Vykej mi“ | `CLAUDE.md` Tón |
 | `{{ROLE_VETA}}` | A1 | `CLAUDE.md`, `MI.md`, `ULOHY.md` (digest) |

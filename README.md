@@ -1,29 +1,35 @@
 # Druhý mozek
 
-**Claude skill, který ti rozhovorem postaví vlastní druhý mozek v Claude Coworku.**
+**Skill, který ti rozhovorem postaví vlastní druhý mozek v Claude Coworku
+nebo v ChatGPT Work.**
 
-Obsidian vault s pravidly pro Clauda, osobní profil s rozhodovacím
+Obsidian vault s pravidly pro asistenta, osobní profil s rozhodovacím
 filtrem, lidi a sliby, schůzky, zakázky a projekty. K tomu denní smyčka:
 večer pár minut hlasovky nebo krátký zápis, ráno brief s tím, co tě dnes
-čeká, a max. tři otázky na doplnění. Prvních 14 dní tě Claude učí, jak
+čeká, a max. tři otázky na doplnění. Prvních 14 dní tě asistent učí, jak
 s ním mluvit, aby z toho šla data.
 
 Pro lidi, co pracují: zaměstnance, podnikatele, freelancery i kombinace.
 Česky, bez programování a bez terminálu, všechno klikáním a mluvením.
 
 > [!NOTE]
-> Neoficiální osobní projekt. Není spojený s firmou Anthropic ani jí
-> schválený.
+> Neoficiální osobní projekt. Není spojený s firmami Anthropic ani
+> OpenAI ani jimi schválený.
 
 ---
 
 ## Co budeš potřebovat
 
-- **Placený tarif Claude** (Pro, Max, Team nebo Enterprise). Cowork
-  v bezplatném tarifu není.
-- **Desktopovou appku Claude** pro Mac nebo Windows ([claude.com/download](https://claude.com/download)).
-  Vault leží na tvém počítači, z prohlížeče ani z telefonu na něj Claude
-  nedosáhne.
+- **Jednu z appek:**
+  - **Claude Cowork:** placený tarif Claude (Pro, Max, Team nebo
+    Enterprise) a desktopová appka Claude pro Mac nebo Windows
+    ([claude.com/download](https://claude.com/download)).
+  - **ChatGPT Work:** placený tarif ChatGPT, na kterém je Work,
+    a desktopová appka ChatGPT pro Mac nebo Windows. Podpora ChatGPT
+    Work je nová a zatím méně vyzkoušená než Cowork.
+
+  Vault leží na tvém počítači, z prohlížeče ani z telefonu na něj
+  asistent nedosáhne, proto desktopová appka.
 - **Obsidian** ([obsidian.md](https://obsidian.md), zdarma). Skill tě
   instalací provede.
 - Volitelně **Plaud** na hlasovky a nahrávky schůzek. Bez něj to jde
@@ -33,8 +39,12 @@ Pro lidi, co pracují: zaměstnance, podnikatele, freelancery i kombinace.
 
 ## Instalace
 
-1. Stáhni **[druhy-mozek.zip](https://github.com/itsadamko/druhy-mozek-skill/raw/main/druhy-mozek.zip)**
-   (nerozbaluj ho).
+Stáhni **[druhy-mozek.zip](https://github.com/itsadamko/druhy-mozek-skill/raw/main/druhy-mozek.zip)**.
+Pak podle appky:
+
+### Claude Cowork
+
+1. Zip nerozbaluj.
 2. V appce Claude otevři **Customize → Skills** (nebo Nastavení →
    Capabilities → Skills), dej **přidat / nahrát skill** a vyber
    stažený zip. Názvy tlačítek se mezi verzemi appky mění, hledej
@@ -46,11 +56,21 @@ Pro lidi, co pracují: zaměstnance, podnikatele, freelancery i kombinace.
    můžeš kdykoli přestat a příště napsat „Pokračuj v nastavení druhého
    mozku“.
 
+### ChatGPT Work
+
+1. V desktopové appce ChatGPT otevři v postranním panelu **Skills**
+   a přidej skill ze staženého zipu. Když appka chce místo zipu složku,
+   zip rozbal a vyber složku `druhy-mozek`.
+2. Když přidání skillu nenabízí, napiš ve Work `@skill-creator`,
+   přilož zip a požádej, ať z něj skill nainstaluje.
+3. Založ projekt **Druhý mozek**, otevři v něm **Work** a napiš:
+   **„Nastav mi druhý mozek.“** Dál je to stejné jako v Claudu.
+
 ## Co vznikne
 
 ```
 Vault/
-├── CLAUDE.md          ← jak s tebou má Claude pracovat (role, tón, pravidla)
+├── CLAUDE.md          ← jak s tebou má asistent pracovat (role, tón, pravidla)
 ├── 00-System/         ← tvůj profil a filtr (MI), pravidla, úlohy, ranní brief
 ├── 05-Inbox/          ← nezařazené, přepisy schůzek
 ├── 10-Firmy/          ← firmy, kde pracuješ nebo které vedeš
@@ -67,8 +87,8 @@ Vault/
 **Denní smyčka:**
 
 - **Večer:** hlasovka do Plaudu, mail sám sobě s předmětem „Hlasovka“
-  nadiktovaný v telefonu, nebo krátký „check-in“ v Coworku.
-- **Ráno:** Claude vstup roztřídí (lidi, sliby, zakázky, deník) a napíše
+  nadiktovaný v telefonu, nebo krátký „check-in“ v appce.
+- **Ráno:** asistent vstup roztřídí (lidi, sliby, zakázky, deník) a napíše
   brief: dnešní schůzky, sliby po termínu, co čeká na tebe, max. tři
   otázky. Podle tarifu a verze appky to běží samo jako naplánovaná úloha,
   nebo napíšeš „ráno“ a stane se totéž. Skill to při nastavení vyzkouší.
@@ -77,21 +97,21 @@ Vault/
 ## Soukromí a firemní data
 
 - Vault je **obyčejná složka s textovými soubory na tvém počítači.**
-  Patří tobě a otevřeš ho i bez Clauda.
+  Patří tobě a otevřeš ho i bez AI.
 - Hned na začátku se skill zeptá, **jestli smíš pracovní informace dávat
-  do svého Claude** (firemní pravidla pro AI). Podle odpovědi omezí, co
-  se zapisuje. Na osobní účet Claude nepřipojuje pracovní mail ani
-  kalendář bez souhlasu firmy.
+  do svého Clauda nebo ChatGPT** (firemní pravidla pro AI). Podle
+  odpovědi omezí, co se zapisuje. Na osobní účet nepřipojuje pracovní
+  mail ani kalendář bez souhlasu firmy.
 - Ranní zpracování čte **jen** tvoje hlasovky (u mailu jen zprávy, které
   sis poslal sám s předmětem „Hlasovka“), nic jiného ve schránce.
-- Claude za tebe nic neposílá, nic nemaže a hesla ani přístupy do vaultu
+- Asistent za tebe nic neposílá, nic nemaže a hesla ani přístupy do vaultu
   nezapisuje.
 
 ## Obsah repa
 
 - `druhy-mozek/`: zdroj skillu (`SKILL.md`, `references/` s postupy,
   `assets/vault/` se šablonami vaultu)
-- `druhy-mozek.zip`: totéž zabalené k nahrání do Claude
+- `druhy-mozek.zip`: totéž zabalené k nahrání do appky
 
 ## Licence
 

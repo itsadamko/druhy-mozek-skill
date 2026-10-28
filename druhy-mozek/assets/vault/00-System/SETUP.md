@@ -5,6 +5,7 @@ setup session ho přečte a pokračuje prvním neodškrtnutým krokem. Po
 dokončení zůstává jako záznam, jak vault vznikl.*
 
 Vault: `{{VAULT_CESTA}}`
+Appka: {{APPKA}}
 **Trénink do:** {{TRENINK_DO}}
 **Ranní zpracování:** (automaticky / na slovo „ráno“, určí test ve fázi 4)
 
